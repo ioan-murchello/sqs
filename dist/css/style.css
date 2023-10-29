@@ -105,6 +105,7 @@ body {
 }
 
 .title-global {
+  font-size: calc(22px + 0.6666666667vw);
   padding: 0 0 0 25px;
   position: relative;
 }
@@ -594,7 +595,7 @@ picture {
 }
 
 .about-title__main {
-  font-size: calc(22px + 0.6666666667vw);
+  font-size: calc(18px + 0.6666666667vw);
 }
 
 .about-title__main.title-global::before {
@@ -616,13 +617,14 @@ picture {
 }
 
 .about-title {
-  font-size: calc(22px + 0.6666666667vw);
+  font-size: calc(18px + 0.6666666667vw);
   font-weight: 500;
   font-family: "Montserrat";
 }
 
 .about-me {
   margin-top: 20px;
+  line-height: 1.7rem;
   font-size: calc(16px + 0.3333333333vw);
 }
 
@@ -692,90 +694,6 @@ picture {
      object-fit: cover;
   filter: opacity(0.3) grayscale(10);
   -webkit-filter: opacity(0.3);
-}
-
-.projekte {
-  background-color: #f6feff;
-  padding: 100px 0;
-}
-
-.projekte-title {
-  font-size: 30px;
-  display: inline-block;
-  margin: 0 0 50px 0;
-}
-
-.projekte-title.title-global::before {
-  background-color: rgb(255, 19, 19);
-}
-
-.projekte-card {
-  margin: 0 0 60px 0;
-}
-
-.projekte-text-container {
-  display: flex;
-  align-items: center;
-  font-family: Oswald;
-  background: linear-gradient(to left, #f6feff, rgb(230, 230, 230));
-  text-transform: uppercase;
-  font-size: 18px;
-  padding: 7px 0 10px 15px;
-}
-
-.projekte-text-title {
-  display: inline-flex;
-  align-items: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  padding: 10px;
-  color: rgb(92, 91, 91);
-}
-
-.projekte-text-title svg {
-  width: 30px;
-  height: 30px;
-  margin: 0 10px 0 0;
-}
-
-.slider-container {
-  border: 1px solid #000;
-}
-
-.slider-info {
-  border: 1px solid #000;
-  width: 100%;
-  height: 300px;
-  display: flex;
-}
-
-.slider-info__item {
-  width: 100%;
-  height: 300px;
-  border: 7px solid blue;
-}
-
-.slider-info__img-wrapper {
-  position: relative;
-  border: 1px solid orange;
-  width: 500px;
-  height: 300px;
-}
-
-.slider-img__info {
-  display: block;
-  position: absolute;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.slider {
-  width: 100%;
-}
-
-.slider-title {
-  font-size: calc(20px + 0.5vw);
 }
 
 .contacts_block {
@@ -1152,63 +1070,32 @@ input::placeholder {
   }
 }
 
-.accordion {
-  max-width: 100%;
-  margin: 40px 0 0 0;
+.info {
+  padding: 100px 0 0 0;
 }
 
-.accordion-section {
-  margin: 0 0 15px 0;
-  overflow: hidden;
+.info-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.accordion-header {
-  background-color: #000000;
-  color: #fff;
-  padding: 12px;
-  font-size: calc(20px + 0.3333333333vw);
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s;
-  font-weight: normal;
+.info-img {
+  place-self: center;
 }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-  padding: 0 12px;
-  opacity: 0;
-  transition: opacity 0.3s;
+.info-title.title-global::before {
+  background-color: rgb(255, 19, 19);
 }
 
-.accordion-section:last-child .accordion-header {
-  border-bottom: none;
+.info-text {
+  margin-top: 20px;
+  line-height: 1.7rem;
+  font-size: calc(16px + 0.3333333333vw);
 }
 
-.accordion-header::after {
-  content: "▶";
-  font-size: 18px;
-  transition: transform 0.3s;
-}
-
-.accordion-header.active::after {
-  transform: rotate(90deg);
-}
-
-.accordion-section.active .accordion-header {
-  background-color: #e0e0e0;
-}
-
-.accordion-section.active .accordion-content {
-  max-height: 1000px;
-  /* Adjust to your needs */
-  opacity: 1;
+.info-card__title {
+  font-size: calc(18px + 0.6666666667vw);
+  margin: 20px 0;
 }
 
 .footer {
@@ -1469,6 +1356,10 @@ input::placeholder {
 
   .form {
     padding: 20px 0 0 0;
+  }
+
+  .info-text {
+    margin-bottom: 30px;
   }
 }
 
