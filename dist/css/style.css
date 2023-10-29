@@ -43,7 +43,7 @@ body {
 .hero {
   height: 100vh;
   padding: 50px 0 0 0;
-  background-image: url("https://protonvpn.com/blog/wp-content/uploads/2023/03/wifi-diag-1024x475.png");
+  background-image: url("../img/main-logo.svg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +58,6 @@ body {
   font-weight: 600;
   font-family: "Montserrat";
   width: 100%;
-  height: 70vh;
   background: rgba(255, 255, 255, 0.2);
   /* Set background color with transparency */
   -webkit-backdrop-filter: blur(3px);
@@ -66,15 +65,16 @@ body {
   /* Apply a blur effect to the container */
   border-radius: 10px;
   /* Add rounded corners for a glass-like appearance */
-  padding: 20px;
+  padding: 100px 60px;
+  margin: 60px 0 0 0;
+  box-shadow: 0 0 10px rgb(204, 204, 204);
 }
 
 .hero-title {
   display: inline-flex;
-  margin-top: 20%;
   background-color: rgb(253, 224, 71);
   padding: 15px 65px 10px 12px;
-  font-size: calc(20px + 1.6666666667vw);
+  font-size: calc(16px + 1.1666666667vw);
 }
 
 .hero-sub__title {
@@ -82,7 +82,7 @@ body {
   margin-top: 20px;
   background-color: #f76c54;
   padding: 8px 10px 15px 12px;
-  font-size: calc(18px + 0.5833333333vw);
+  font-size: calc(16px + 1.1666666667vw);
 }
 
 .swiper {
@@ -766,22 +766,6 @@ picture {
   color: #000000;
 }
 
-.footer {
-  width: 100%;
-  height: 80px;
-  background-color: #404149;
-}
-
-.footer_block {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .kontact {
   margin: 0 0 100px 0;
   padding: 100px 0 0 0;
@@ -832,7 +816,6 @@ picture {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  padding: 5px;
 }
 
 /* ._req */
@@ -998,22 +981,27 @@ picture {
 }
 
 .helper-block {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 }
 
 input::-moz-placeholder {
-  font-size: 1.2rem;
+  font-size: 14px;
 }
 
 input::placeholder {
-  font-size: 1.2rem;
+  font-size: 14px;
 }
 
 .nameError {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  border: 1px solid;
   color: rgb(255, 0, 0);
-  padding: 8px;
+  font-size: calc(14px + 0.1666666667vw);
 }
 
 .airplane {
@@ -1099,8 +1087,8 @@ input::placeholder {
 }
 
 .footer {
-  height: 280px;
-  min-height: 200px;
+  width: 100%;
+  background-color: #404149;
   padding: 50px 0;
 }
 
@@ -1129,19 +1117,19 @@ input::placeholder {
 }
 
 .footer__logo-title {
-  font-size: 34px;
+  font-size: calc(24px + 0.5vw);
   font-weight: 600;
-  line-height: 42px;
+  line-height: 140%;
 }
 
 .footer__logo-subtitle {
   display: flex;
-  width: 57px;
+  width: 94px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 20px;
+  font-size: calc(16px + 0.3333333333vw);
 }
 
 .footer__wrapper {
@@ -1162,30 +1150,13 @@ input::placeholder {
   text-transform: uppercase;
 }
 
-.author {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 20px;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  color: #fff;
-  background-color: #000;
-  margin: 0 15px;
-}
-
 .footer__opentime {
   text-transform: uppercase;
+  font-size: calc(16px + 0.3333333333vw);
 }
 
 .footer__opnetime-time {
-  font-size: 20px;
+  font-size: calc(16px + 0.3333333333vw);
 }
 
 .footer__openday {
@@ -1196,7 +1167,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: calc(16px + 0.3333333333vw);
   justify-content: space-between;
 }
 
@@ -1209,6 +1180,7 @@ input::placeholder {
 .footer__phone,
 .footer__email {
   color: #fff;
+  font-size: calc(16px + 0.3333333333vw);
 }
 
 @media (min-width: 768px) {
@@ -1228,14 +1200,23 @@ input::placeholder {
   }
 }
 
+@media (max-width: 968px) {
+  .form {
+    width: 70%;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero-title {
+    margin-top: 0;
+  }
+
   .header {
     background-color: transparent;
   }
 
   .header__menu_wrapper {
     display: flex;
-    height: 50px;
   }
 
   .header__nav {
@@ -1333,6 +1314,23 @@ input::placeholder {
     margin-bottom: 30px;
   }
 
+  .about-card:nth-child(2) {
+    place-self: start;
+    min-width: 100%;
+  }
+
+  .about-card {
+    max-width: 100%;
+  }
+
+  .about-card__title {
+    left: 0;
+  }
+
+  .about-card:nth-child(2) .about-card__title {
+    left: 0;
+  }
+
   .kontact__wrapper {
     display: flex;
     justify-content: center;
@@ -1349,25 +1347,49 @@ input::placeholder {
     width: 100%;
   }
 
+  .form__label-wrapper {
+    margin: 0 0 30px 0;
+  }
+
   .form__inputs-wrapper {
     flex-direction: column;
     row-gap: 20px;
   }
 
   .form {
-    padding: 20px 0 0 0;
+    width: 100%;
   }
 
   .info-text {
     margin-bottom: 30px;
   }
+
+  .footer__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__logo-text {
+    margin: 0 0 15px 0;
+    padding: 10px 0;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__worktime {
+    margin: 0 0 30px 0;
+    padding: 10px 0;
+  }
+
+  .footer__call {
+    margin: 0 0 15px 0;
+  }
 }
 
 @media (max-width: 600px) {
-  .kontact {
-    margin: 0 0 0 0;
-  }
-
   .kontact__body {
     flex-direction: column;
     width: 100%;
@@ -1385,11 +1407,11 @@ input::placeholder {
 
   .form__label {
     font-size: 12px;
-    transform: translate(10px, 9px);
-    -webkit-transform: translate(10px, 9px);
-    -moz-transform: translate(10px, 9px);
-    -ms-transform: translate(10px, 9px);
-    -o-transform: translate(10px, 9px);
+    transform: translate(10px, -4px);
+    -webkit-transform: translate(10px, -4px);
+    -moz-transform: translate(10px, -4px);
+    -ms-transform: translate(10px, -4px);
+    -o-transform: translate(10px, -4px);
   }
 
   .active_label {
@@ -1410,6 +1432,16 @@ input::placeholder {
 
   ._info {
     font-size: 14px;
+  }
+
+  .form__label-wrapper svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .info-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
