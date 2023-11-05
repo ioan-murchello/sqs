@@ -4,10 +4,12 @@
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
 
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 html,
 body {
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mulish", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -31,15 +33,6 @@ body {
   padding: 0 15px;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background-color: #fff;
-}
-
 .hero {
   height: 100vh;
   padding: 50px 0 0 0;
@@ -58,13 +51,12 @@ body {
   font-weight: 600;
   font-family: "Montserrat";
   width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.541);
   /* Set background color with transparency */
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   /* Apply a blur effect to the container */
-  border-radius: 10px;
-  /* Add rounded corners for a glass-like appearance */
+  -moz-backdrop-filter: blur(3px);
   padding: 100px 60px;
   margin: 60px 0 0 0;
   box-shadow: 0 0 10px rgb(204, 204, 204);
@@ -305,8 +297,7 @@ a {
 .slick-arrow::before {
   display: block;
   background-color: transparent;
-  font-size: 62px;
-  line-height: 1;
+  font-size: 60px;
   color: rgb(133, 133, 133);
 }
 
@@ -334,7 +325,7 @@ a {
 }
 
 .slick-slide {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .slick-slide img {
@@ -344,6 +335,10 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.slider-title {
+  font-size: calc(20px + 0.5vw);
 }
 
 .header {
@@ -362,7 +357,7 @@ a {
 }
 
 .header__content {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -421,6 +416,11 @@ a {
   justify-content: space-between;
   align-items: center;
   overflow: auto;
+  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
 }
 
 .header__logo {
@@ -508,11 +508,11 @@ a {
 }
 
 .active-burger:first-child {
-  transform: translate(0, 9px);
+  transform: translate(0, 9px) rotate(45deg);
   -webkit-transform: translate(0, 9px) rotate(45deg);
-  -moz-transform: translate(0, 9px);
-  -ms-transform: translate(0, 9px);
-  -o-transform: translate(0, 9px);
+  -moz-transform: translate(0, 9px) rotate(45deg);
+  -ms-transform: translate(0, 9px) rotate(45deg);
+  -o-transform: translate(0, 9px) rotate(45deg);
 }
 
 .active-burger:nth-child(2) {
@@ -533,15 +533,6 @@ a {
 
 .blocked {
   overflow: hidden;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background-color: rgb(101, 62, 143);
 }
 
 .phone__li {
@@ -572,8 +563,8 @@ a {
 
 .about-container__second {
   flex-direction: column;
-  margin: 0 0 80px 0;
-  padding: 0 0 60px 0;
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
 }
 
 .about-image__wrapper {
@@ -592,10 +583,6 @@ picture {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.about-title__main {
-  font-size: calc(18px + 0.6666666667vw);
 }
 
 .about-title__main.title-global::before {
@@ -636,7 +623,7 @@ picture {
 .about-cards__container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  row-gap: 20px;
+  row-gap: 34px;
 }
 
 .about-card {
@@ -647,7 +634,7 @@ picture {
 
 .about-card:nth-child(2) {
   min-width: 64%;
-  place-self: end;
+  justify-self: end;
 }
 
 .about-card__title {
@@ -658,10 +645,8 @@ picture {
   padding: 8px;
   line-height: 1.9rem;
   background: rgba(255, 255, 255, 0.66);
-  /* Set the background color with opacity */
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  /* Apply a blur effect to the background */
 }
 
 .about-card:nth-child(2) .about-card__title {
@@ -692,8 +677,8 @@ picture {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: opacity(0.3) grayscale(10);
-  -webkit-filter: opacity(0.3);
+  filter: opacity(0.5);
+  -webkit-filter: opacity(0.5);
 }
 
 .contacts_block {
@@ -849,7 +834,7 @@ picture {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
   position: relative;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -999,9 +984,9 @@ input::placeholder {
   position: absolute;
   bottom: -20px;
   left: 0;
-  border: 1px solid;
   color: rgb(255, 0, 0);
-  font-size: calc(14px + 0.1666666667vw);
+  background-color: #ffffff;
+  font-size: calc(12px + 0.1666666667vw);
 }
 
 .airplane {
@@ -1069,6 +1054,10 @@ input::placeholder {
 
 .info-img {
   place-self: center;
+}
+
+.info-title {
+  margin-bottom: 34px;
 }
 
 .info-title.title-global::before {
@@ -1211,6 +1200,14 @@ input::placeholder {
     margin-top: 0;
   }
 
+  .slick-slide {
+    margin: 0 7px;
+  }
+
+  .slick-center {
+    width: 80%;
+  }
+
   .header {
     background-color: transparent;
   }
@@ -1227,7 +1224,7 @@ input::placeholder {
     height: 100%;
     left: -100%;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: rgba(0, 0, 0, 0.94);
     overflow: auto;
     z-index: 400;
     transform: translateX(-100%);
@@ -1235,11 +1232,6 @@ input::placeholder {
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
   }
 
   .header__logo {
@@ -1293,16 +1285,22 @@ input::placeholder {
     display: none;
   }
 
+  .about {
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+
   .about-container,
   .about-container__second {
     flex-direction: column-reverse;
     height: auto;
     padding: 20px 0;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
   }
 
   .about-container__second {
     flex-direction: column;
+    margin: 0 0 20px 0;
   }
 
   .about-image__wrapper {
@@ -1310,12 +1308,16 @@ input::placeholder {
     min-height: 240px;
   }
 
+  .about-info {
+    margin: 0 0 10px 0;
+  }
+
   .about-me {
     margin-bottom: 30px;
   }
 
   .about-card:nth-child(2) {
-    place-self: start;
+    justify-self: start;
     min-width: 100%;
   }
 
@@ -1329,6 +1331,11 @@ input::placeholder {
 
   .about-card:nth-child(2) .about-card__title {
     left: 0;
+  }
+
+  .kontact {
+    padding: 40px 0 0 0;
+    margin: 0 0 70px 0;
   }
 
   .kontact__wrapper {
@@ -1358,6 +1365,10 @@ input::placeholder {
 
   .form {
     width: 100%;
+  }
+
+  .info {
+    padding: 40px 0 0 0;
   }
 
   .info-text {
@@ -1390,6 +1401,11 @@ input::placeholder {
 }
 
 @media (max-width: 600px) {
+  .hero-wrapper {
+    padding: 20px;
+    margin: 20px 0 0 0;
+  }
+
   .kontact__body {
     flex-direction: column;
     width: 100%;
